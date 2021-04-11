@@ -37,7 +37,7 @@ declare var __VERSION__: string;
  * Parse and build an expression, and place that expression in the DOM node
  * given.
  */
-let render: (string, Node, SettingsOptions) => void = function(
+export const render: (string, Node, SettingsOptions) => void = function(
     expression: string,
     baseNode: Node,
     options: SettingsOptions,
@@ -64,7 +64,7 @@ if (typeof document !== "undefined") {
 /**
  * Parse and build an expression, and return the markup for that.
  */
-const renderToString = function(
+export const renderToString = function(
     expression: string,
     options: SettingsOptions,
 ): string {
